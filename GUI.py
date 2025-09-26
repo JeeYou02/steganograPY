@@ -1,5 +1,5 @@
 import gradio as gr
-import steganography as st
+import steganograPY as st
 from PIL import Image
 import numpy as np
 
