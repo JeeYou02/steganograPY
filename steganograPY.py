@@ -1,5 +1,3 @@
-import cv2
-
 def str_to_bin(msg):
     bin_msg = ""
     for c in msg:
@@ -25,7 +23,7 @@ def set_LSB(pxl_val, bit):
     if(pxl_val % 2 == 1):       #setting bit to 0
         return pxl_val - 1
 
-def steganography_hide_msg(img, msg):
+def hide_msg(img, msg):
     bin_msg = str_to_bin(msg + "###")
 
     out_img = img.copy()
@@ -41,7 +39,7 @@ def steganography_hide_msg(img, msg):
 
     return out_img
 
-def steganography_reveal_msg(img):
+def reveal_msg(img):
     bin_msg = ""
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):

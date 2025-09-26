@@ -36,4 +36,4 @@ with gr.Blocks() as app:
         btn2.click(reveal_msg, input_img2, output_txt)
 
 
-app.launch(share=False)
+app.launch(share=False, server_name='0.0.0.0', server_port=8080)
