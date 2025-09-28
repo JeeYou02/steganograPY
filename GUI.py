@@ -5,12 +5,12 @@ import numpy as np
 
 def hide_msg(img, msg):
     img = np.array(img)
-    out = st.steganography_hide_msg(img, msg)
+    out = st.hide_msg(img, msg)
     return Image.fromarray(out)
 
 def reveal_msg(img):
     img = np.array(img)
-    return st.steganography_reveal_msg(img)
+    return st.reveal_msg(img)
 
 with gr.Blocks() as app:
 
